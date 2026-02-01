@@ -1,0 +1,63 @@
+body{
+  background-color: rgb(69, 102, 140);
+  color: white;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.title{
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+}
+.move-icon{
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  background-color:  rgb(18, 41, 68);
+  border: 0.3rem solid white;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.move-icon-each-round{
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+.result{
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.score{
+  margin-top: 2rem;
+}
+.reset-score-button{
+  background-color: rgb(25, 96, 210);
+  border: none;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.auto-play-button{
+  background-color: rgb(73, 192, 5);
+  border: none;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.play-box{
+  padding-left: clamp(2rem, 6vw, 4rem);
+}
+@media (max-width: 600px) {
+  .move-icon {
+    border-width: 3px;
+  }
+  .reset-score-button {
+    width: 80%;
+  }
+}

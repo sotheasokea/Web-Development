@@ -1,0 +1,95 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  margin: 0;
+}
+.game-title-box{
+  font-size: clamp(1.2rem, 8vw, 2.5rem);
+  margin-bottom: 2%;
+}
+.container{
+  /* width: 50%; */
+  /* background-color: antiquewhite; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 90vw;          /* responsive */
+  max-width: 400px;
+}
+.game-detail-container{
+  width: clamp(30%, 200vw, 300px);
+  height: clamp(200px, 200vh, 100px);;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aliceblue; */
+  gap: 5%;
+}
+.score-and-move-box{
+  margin-top: 5%;
+  width: clamp(140px, 25vw, 220px);
+  padding-right: 0;
+  border-radius: clamp(8px, 4vw, 20px);
+  font-size: clamp(0.8rem, 2vw, 2rem);
+  border: 2px solid rgb(213, 206, 206);
+  text-align: center;
+}
+.reset-button{
+  margin-top: 2%;
+  width: clamp(140px, 25vw, 220px);
+  height: clamp(20px, 20vh, 30px);
+  background-color: rgb(134, 179, 241);
+  font-size: clamp(8px, 4vw, 20px);
+  border-radius: clamp(8px, 4vw, 20px);
+  border: none;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card-box{
+  aspect-ratio: 1/1.2;
+  /* background-color: aqua; */
+  perspective: 1000px;
+  
+}
+.card-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.card-box.selected .card-inner{
+  background-color: rgb(239, 227, 7);
+}
+.card-box.matched .card-inner{
+  background-color: rgb(67, 28, 164);
+}
+.card-front{
+  background-color: rgba(138, 241, 166, 0.955);
+  transform: rotateY(180deg);
+}
+.card-back{
+  background-color: rgb(241, 229, 140);
+}
+
+.card-front, .card-back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(1.8rem, 8vw, 2.5rem);
+  border-style: groove;
+}
+.card-box.selected .card-inner, .card-box.matched .card-inner{
+  transform: rotateY(180deg);
+}
